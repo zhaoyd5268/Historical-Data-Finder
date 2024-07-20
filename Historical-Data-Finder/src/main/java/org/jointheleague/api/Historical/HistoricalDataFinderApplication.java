@@ -1,4 +1,4 @@
-package org.jointheleague.api.Historical.Data.Finder.Historical.Data.Finder;
+package org.jointheleague.api.Historical;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

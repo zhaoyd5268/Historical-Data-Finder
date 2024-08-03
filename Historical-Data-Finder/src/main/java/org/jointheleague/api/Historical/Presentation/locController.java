@@ -1,5 +1,6 @@
 package org.jointheleague.api.Historical.Presentation;
 
+import Service.locService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -12,23 +13,28 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.xml.transform.Result;
 
 @RestController
+public class locController {
 
-public class LocController {
+    private final locService locService;
+
+    public locController(locService locService) {
+        this.locService = locService;
+    }
 
     @GetMapping("/searchLocResults")
-    @Operation(summary = "Searches for books",
+    @Operation(summary = "Searches for literature matching the topic put in",
             description = "Response may include multiple Result values.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Result(s) found ",
                     content = {@Content
-                            (mediaType="application/json",
-                                    schema=@Schema(implementation = Result.class))
+                            (mediaType = "application/json",
+                                    schema = @Schema(implementation = Result.class))
                     }),
-            @ApiResponse(responseCode = "404", description = "Result(s) not found"),
-            @ApiResponse(responseCode = "300", description = "Result(s) not found!")
+            @ApiResponse(responseCode = "404", description = "Result(s) not found :("),
+            @ApiResponse(responseCode = "300", description = "Result(s) not found :(")
     })
-    public String getResults(@RequestParam(value="q") String query) {
-        return ("Looking for interesting literature related to " + query + ". ;)");
+    public String getResults(@RequestParam(value = "q") String query) {
+        return ("Looking for interesting literature related to " + query + "... ;)");
     }
 
 }

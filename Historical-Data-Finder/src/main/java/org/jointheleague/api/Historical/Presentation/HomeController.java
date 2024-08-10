@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.MOVED_PERMANENTLY)
 
-public class homeController {
+public class HomeController {
 
     @GetMapping("/")
     public String home() {

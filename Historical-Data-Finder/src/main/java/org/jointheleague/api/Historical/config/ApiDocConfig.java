@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import io.swagger.v3.oas.models.OpenAPI;
 
 @Configuration
-public class apiDocConfig {
+public class ApiDocConfig {
 
   /*  private ApiInfo apiInfo() {
         return new ApiInfo(

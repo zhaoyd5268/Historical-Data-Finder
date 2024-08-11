@@ -15,11 +15,12 @@ public class LocRepository {
 
     private static final String baseUrl = "https://www.loc.gov/books";
 
-    public LocRepository() {
-        webClient = WebClient
+    public LocRepository(WebClient webClient) {
+        this.webClient = WebClient
                 .builder()
                 .baseUrl(baseUrl)
                 .build();
+        webClient = this.webClient;
     }
     public List<Result> getResults(String query) {
         return webClient.get()

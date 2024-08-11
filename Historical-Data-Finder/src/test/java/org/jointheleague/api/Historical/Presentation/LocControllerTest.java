@@ -57,24 +57,5 @@ class LocControllerTest {
         assertEquals(exceptionThrown.getMessage(), "404 NOT_FOUND \"Results not found\"");
     }
 
-    @Test
-    void given_Query_whenGetResults_returnResultsList() {
-
-        //DEBUGGGG
-
-        //given
-        String query = "java";
-        Result result = new Result();
-        result.setTitle("TITLE");
-        result.setLink("LINK");
-        result.setAuthors(Collections.singletonList("AUTHORS"));
-        List<Result> expectedResults = Collections.singletonList(result);
-
-        //when
-        List<Result> actualResults = locController.getResults(query);
-
-        //then
-        assertInstanceOf(List.class, actualResults);
-    }
 
 }

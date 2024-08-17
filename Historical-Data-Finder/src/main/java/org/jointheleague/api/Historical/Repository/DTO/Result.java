@@ -1,4 +1,4 @@
-package org.jointheleague.api.Historical.DTO;
+package org.jointheleague.api.Historical.Repository.DTO;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -7,19 +7,11 @@ import java.util.Properties;
 
 import com.fasterxml.jackson.annotation.*;
 
-import javax.annotation.processing.Generated;
-
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({"type", "properties"})
-
-@Generated("jsonschema2pojo")
-
 public class Result {
-
 
     private String title;
 
-    @JsonAlias("Contributer")
+    @JsonAlias("contributor")
     private List<String> authors;
 
     @JsonAlias("id")

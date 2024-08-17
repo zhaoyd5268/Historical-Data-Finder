@@ -1,7 +1,7 @@
 package org.jointheleague.api.Historical.Repository;
 
-import org.jointheleague.api.Historical.DTO.LocResponse;
-import org.jointheleague.api.Historical.DTO.Result;
+import org.jointheleague.api.Historical.Repository.DTO.LocResponse;
+import org.jointheleague.api.Historical.Repository.DTO.Result;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -15,12 +15,15 @@ public class LocRepository {
 
     private static final String baseUrl = "https://www.loc.gov/books";
 
-    public LocRepository(WebClient webClient) {
+    public LocRepository() {
         this.webClient = WebClient
                 .builder()
                 .baseUrl(baseUrl)
                 .build();
-        webClient = this.webClient;
+    }
+
+    public LocRepository(WebClient webClient) {
+        this.webClient = webClient;
     }
     public List<Result> getResults(String query) {
         return webClient.get()

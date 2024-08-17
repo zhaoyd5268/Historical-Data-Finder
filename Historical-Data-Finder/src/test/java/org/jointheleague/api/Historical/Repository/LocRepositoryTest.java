@@ -1,7 +1,7 @@
 package org.jointheleague.api.Historical.Repository;
 
-import org.jointheleague.api.Historical.DTO.LocResponse;
-import org.jointheleague.api.Historical.DTO.Result;
+import org.jointheleague.api.Historical.Repository.DTO.LocResponse;
+import org.jointheleague.api.Historical.Repository.DTO.Result;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

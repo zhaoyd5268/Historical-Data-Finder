@@ -1,6 +1,6 @@
 package org.jointheleague.api.Historical.Service;
 
-import org.jointheleague.api.Historical.DTO.Result;
+import org.jointheleague.api.Historical.Repository.DTO.Result;
 import org.jointheleague.api.Historical.Repository.LocRepository;
 import org.springframework.stereotype.Service;
 

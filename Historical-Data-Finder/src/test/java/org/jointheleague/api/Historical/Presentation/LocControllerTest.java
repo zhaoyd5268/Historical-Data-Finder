@@ -1,6 +1,6 @@
 package org.jointheleague.api.Historical.Presentation;
 
-import org.jointheleague.api.Historical.DTO.Result;
+import org.jointheleague.api.Historical.Repository.DTO.Result;
 import org.jointheleague.api.Historical.Service.LocService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
